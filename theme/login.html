@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0,minimum-scale=1.0,maximum-scale=1.0" />
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="x5-fullscreen" content="true">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+    <meta name='keywords' content='可视化 MarsGIS 木遥' />
+    <meta name='description' content='Mars3D综合态势展示系统' />
+    <link rel='icon' href='img/favicon.ico' />
+    <title>Mars3D综合态势展示系统 - 登录</title>
+
+    <!--第三方lib-->
+    <script type="text/javascript" src="../lib/include-lib.js?time=20210105" libpath="../lib/"
+            include="jquery,font-awesome,layer,haoutil"></script>
+    <!--css-->  
+    <link href='css/main.css' type='text/css' rel='stylesheet' />
+    <link href='css/login.css' type='text/css' rel='stylesheet' />  
+</head>
+<body class='body'>
+
+    <div id="loginBJ" class='loginContainer'>
+        <!-- 背景,默认是图片。可以url传参style，使用不同样式！ -->
+        <img src="img/login/bg2.jpg" class="img" />
+        <img src="img/login/bg1.jpg" class="img" />
+        <img src="img/login/bg3.jpg" class="img" />
+        <img src="img/login/bg4.jpg" class="img" />
+    </div>
+
+    <!--配置居中，class加 center-->
+    <div class='logo'><img src='img/logo.png' alt='' />Mars3D综合态势展示系统</div>
+
+    <!--配置居中，class加 center，深色加gray-->
+    <div class='login '>
+        <h3>欢迎登录</h3>
+        <form>
+            <ul>
+                <li><input id="txtUser" type='text' name='user' value='marsgis' placeholder='用户名' /><i class="fa fa-user"></i></li>
+                <li><input id="txtPwd" type='password' name='pwd' value='marsgis' placeholder='密码' /><i class="fa fa-key"></i></li>
+                <!--<li>
+                    <input id="txtCaptcha" type="text" name="captcha" placeholder="验证码" class="validCode">
+                    <a class="reload-vify" href="#">
+                        <img src="" height="40">
+                    </a> 
+                </li>--> 
+            </ul>
+            <p><button id="btnLogin" type='button'>登录</button></p>
+        </form>
+    </div>
+
+    <div class='footer'>
+        <p>copyright &copy; <a href="http://www.marsgis.cn" target="_blank">火星科技</a> 2017-2021 </p>
+    </div>
+
+    <!--js-->  
+    <script src="../js/server.js"></script>
+    <script src="js/login.js" type='text/javascript'></script>
+</body>
+</html>

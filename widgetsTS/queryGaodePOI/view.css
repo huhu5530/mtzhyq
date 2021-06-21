@@ -1,0 +1,8 @@
+
+.radio-inline + .radio-inline {
+    margin-left: 5px;
+}
+
+.radio label { 
+    padding-left: 1px;
+}

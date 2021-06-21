@@ -1,0 +1,614 @@
+
+body{
+    font-size: 14px;
+    color: #ffffff;
+}
+ul,li,p{
+    margin: 0;
+    padding: 0;
+}
+i{
+    font-style: normal;
+}
+
+
+.clearfix{
+    *zoom: 1;
+}
+.clearfix::after{
+    content: '';
+    display: block;
+    overflow: hidden;
+    clear: both;
+    visibility: hidden;
+}
+
+.checkbox{
+    margin: 0;;
+}
+.head{
+    height: 60px;
+    background: #24413e;
+}
+.faultStep{
+    height: 33px;
+    position: relative;
+}
+.faultStep span{
+    width: 33.333%;
+    height: 33px;
+    float: left;
+}
+.faultStep span:nth-child(1){
+    background: #656b2c;
+    border-right: 1px solid #5e8834;
+}
+.faultStep span:nth-child(2){
+    background: #196b4a;
+    border-right: 1px solid #127980;
+}
+.faultStep span:nth-child(3){
+    background: #195c78;
+}
+.stepRing{
+    width: 312px;
+    height: 1px;
+    background: #ffffff;
+    position: absolute;
+    left: 50%;
+    margin-left: -156px;
+    top: 16px;
+}
+.stepRing i{
+    width: 10px;
+    height: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ffffff;
+    border-radius: 50%;
+    background: #999999;
+    position: absolute;
+    top: 50%;
+    margin-top: -5px;
+}
+.stepRing i:nth-child(1){
+    left: 0;
+}
+.stepRing i:nth-child(2){
+    left: 44px;
+}
+.stepRing i:nth-child(3){
+    left: 118px;
+}
+.stepRing i:nth-child(4){
+    left: 162px;
+}
+.stepRing i:nth-child(5){
+    left: 237px;
+}
+.stepRing i:nth-child(6){
+    left: 281px;
+}
+.stepRing .nowStep{
+    background: #00ff33;
+}
+
+
+.faultText span{
+    width: 33.333%;
+    height: 27px;
+    float: left;
+    font-size: 14px;
+    color: #ffffff;
+    line-height: 27px;
+    text-align: center;
+}
+.faultText .active{
+    color: #33ffff;
+}
+
+.faultMain{
+    width: 100%;
+    overflow: hidden;
+}
+.faultCon{
+    width: 9999999px;
+    float: left;
+}
+.faultInfo{
+    width: 358px;
+    float: left;
+}
+.dashed{
+    margin-top: 20px;
+    padding-bottom: 30px;
+    border-bottom: 1px dashed #797979;
+}
+.title{
+    height: 30px;
+    margin-left: 14px;
+    border-left: 3px solid #00ccff;
+    padding-left: 6px;
+    font-size: 16px;
+    color: #ffffff;
+    line-height: 30px;
+}
+.faultChooseDot{
+    margin: 21px 0 0 14px;
+}
+.chooseDot{
+    width: 112px;
+    height: 35px;
+    box-sizing: border-box;
+    border: 1px solid #00ccff;
+    background: rgba(51, 204, 255, .35);
+    font-size: 14px;
+    color: #ffffff;
+    line-height: 35px;
+    text-align: center;
+    cursor: pointer;
+}
+.dotInfo{
+    margin-top: 18px;
+}
+.dotInfo li{
+    margin-bottom: 10px;
+}
+.dotInfo li i{
+    float: left;
+    line-height: 30px;
+    margin-right: 6px;
+}
+.dotInfo li p{
+    width: 228px;
+    height: 30px;
+    float: left;
+    box-sizing: border-box;
+    border: 1px solid #a3a7a8;
+    background: #444c54;
+    padding-left: 15px;
+    font-size: 14px;
+    color: #ffffff;
+    line-height: 30px;
+}
+.dotInfo li span{
+    width: 17px;
+    height: 30px;
+    float: left;
+    margin-left: 11px;
+    background: url(img/del.png) no-repeat 0 center;
+    cursor: pointer;
+}
+
+.parmSet{
+    margin-top: 36px;
+}
+.parmBox{
+    margin-top: 19px;
+    margin-left: 22px;
+}
+.parmBox li{
+    margin-bottom: 10px;
+}
+.parmBox li p{
+    width: 72px;
+    height: 30px;
+    text-align: left;
+    float: left;
+    font-size: 14px;
+    color: #ffffff;
+    line-height: 30px;
+}
+.parmBox li input{
+    width: 174px;
+    height: 30px;
+    box-sizing: border-box;
+    border: 1px solid #a3a7a8;
+    background: #444c54;
+    padding-left: 10px;
+    float: left;
+}
+.parmBox li span{
+    float: left;
+    margin-left: 11px;
+    line-height: 30px;
+}
+.nextStep{
+    width: 162px;
+    height: 40px;
+    display: block;
+    margin: 41px auto 0;
+    border: none;
+    background: #3399ff !important;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.disabled{ 
+    background: #cccccc !important;
+}
+
+.affect,.progressCon span{
+    margin-left: 14px;
+    font-size: 16px;
+    color: #ff9900;
+    line-height: 35px;
+    font-weight: bold;
+    display: block;
+}
+.progressBar{
+    width: 336px;
+    height: 6px;
+    margin: 20px auto 0;
+    background: #e6e6e6;
+    border-radius: 10px;
+    position: relative;
+}
+.otherProgressBar{
+    width: 0;
+    height: 6px;
+    border-radius: 10px;
+}
+.gradient{
+    background: -webkit-linear-gradient(to right, #fee40c 0%, #393939 100%);
+    background: -moz-linear-gradient(to right, #fee40c 0%, #393939 100%);
+    background: linear-gradient(to right, #fee40c 0%, #393939 100%);
+}
+.progressDot{
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 2px solid #000000;
+    background: #999999;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -8px;
+}
+.minBox{
+    width: 336px;
+    margin: 10px auto 0;
+    position: relative;
+}
+.minBox li{
+    position: absolute;
+}
+.minBox .timeMin::after{
+    content: '';
+    display: block;
+    border-radius: 50%;
+    width: 8px;
+    height: 8px;
+    background: #cccccc;
+    position: absolute;
+    top: -17px;
+}
+.minBox li:nth-child(1){
+    left: 0;
+}
+.minBox li:nth-child(2){
+    left: 56px;
+}
+.minBox li:nth-child(3){
+    left: 112px;
+}
+.minBox li:nth-child(4){
+    left: 168px;
+}
+.minBox li:nth-child(5){
+    left: 224px;
+}
+.minBox li:nth-child(6){
+    left: 280px;
+}
+.minBox li:nth-child(7){
+    left: 305px;
+}
+
+.unitFind{
+    width: 284px;
+    height: 30px;
+    margin: 16px auto 0;
+    background: rgba(0,0,0,.5);
+}
+.unitFind span{
+    width: 142px;
+    height: 30px;
+    box-sizing: border-box;
+    float: left;
+    border-right: 1px solid #ffffff;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+}
+.unitFind span:last-child{
+    border: none;
+}
+.unitFind .unitNow{
+    color: #33ffff;
+}
+.pcTable{
+    width: 317px;
+    max-height: 331px;
+    margin: 13px auto 0;
+    overflow: hidden;
+}
+.pcTableCon{
+    width: 999999px;
+    float: left;
+}
+.tableBox{
+    width: 317px;
+    /* border: 1px solid #ffffff; */
+    box-sizing: border-box;
+    overflow: hidden;
+    float: left;
+}
+.tableTile{
+    width: 100%;
+    height: 30px;
+    box-sizing: border-box;
+    border: 1px solid #ffffff;
+}
+.tableTile span,.tableList li span{
+    float: left;
+    text-align: center;
+    line-height: 29px;
+    box-sizing: border-box;
+}
+.tableTile span:first-child,.tableList li span:first-child{
+    width: 10%;
+    border-right: 1px solid #ffffff;
+}
+
+.tableTile span:last-child,.tableList li span:last-child{
+    width: 90%;
+}
+.tableList li span:last-child{
+    cursor: pointer;
+}
+.tableListBox{
+    width: 100%;
+    max-height: 300px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    box-sizing: border-box;
+    
+}
+.tableList{
+    border: 1px solid #ffffff;
+    border-top: none;
+}
+.tableList li{
+    width: 100%;
+    height: 30px;
+    float: left;
+    box-sizing: border-box;
+    border-bottom: 1px solid #ffffff;
+}
+.tableList li:last-child{
+    border-bottom: none;
+}
+
+.tableListBox::-webkit-scrollbar,.lineTableCon::-webkit-scrollbar{
+    width: 0px;
+    height: 0px;
+}
+.tableListBox::-webkit-scrollbar-thumb,.lineTableCon::-webkit-scrollbar-thumb{
+    background-color: rgba(0, 0, 0, .05);
+    border-radius: 10px;
+}
+.btnBox{
+    width: 286px;
+    height: 39px;
+    margin: 25px auto 0;
+}
+.btnBox span{
+    width: 88px;
+    height: 39px;
+    background: #3399ff;
+    float: left;
+    line-height: 39px;
+    text-align: center;
+    margin-right: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.btnBox span:last-child{
+    margin-right: 0;
+}
+
+.loadMore{
+    width: 100px;
+    height: 30px;
+    border: 1px solid #ffffff;
+    line-height: 30px;
+    text-align: center;
+    margin: 15px 0;
+    cursor: pointer;
+    display: none;
+}
+
+.dataNum{
+    margin: 17px 0px 17px 17px;
+    font-size: 16px;
+    color: #ff9900;
+    line-height: 36px;
+    font-weight: bold;
+}
+
+.lineTableBox{
+    width: 340px;
+    max-height: 330px;
+    margin: 20px auto 0;
+    overflow: hidden;
+}
+.lineTableHead{
+    width: 100%;
+    height: 30px;
+    box-sizing: border-box;
+    border: 1px solid #ffffff;
+}
+.lineTableHead span,.lineTableList li span{
+    width: 15%;
+    height: 29px;
+    float: left;
+    box-sizing: border-box;
+    border-right: 1px solid #ffffff;
+    text-align: center;
+    line-height: 30px;
+}
+.lineTableHead span:first-child,.lineTableList li span:first-child{
+    width: 18%;
+}
+.headCheckbox{
+    float: left;
+}
+.lineTableHead span:nth-child(3),.lineTableList li span:nth-child(3){
+    width: 52%;
+}
+.lineTableHead span:last-child,.lineTableList li span:last-child{
+    border-right: none;
+}
+.lineTableCon{
+    width: 100%;
+    max-height: 300px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.lineTableList{
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #ffffff;
+    border-top: none;
+}
+.lineTableList li{
+    height: 30px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #ffffff;
+}
+.lineTableList .nowLi{
+    background: #00ccff;
+}
+.lineTableList li:last-child{
+    border-bottom: none;
+}
+.lineTableList li span:last-child{
+    cursor: pointer;
+}
+.opIcon{
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-image: url(img/opIcon.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.currentOpIcon{
+    background-image: url(img/stop.png);
+}
+.speedBox{
+    margin: 18px 0 0 13px;
+}
+.speedBox span{
+    line-height: 30px;
+    float: left;
+}
+.speedBox input{
+    width: 100px;
+    height: 30px;
+    box-sizing: border-box;
+    border: 1px solid #a3a7a8;
+    background: #444c54;
+    padding-left: 15px;
+    float: left;
+    margin: 0 10px;
+}
+.startAndEnd{
+    margin: 28px 0 0 13px;
+    display: none;
+}
+.startAndEndText{
+    width: 72px;
+    height: 30px;
+    box-sizing: border-box;
+    border: 1px solid #00ccff;
+    background: rgba(51, 204, 255, .35);
+    border-radius: 15px;
+    float: left;
+    line-height: 30px;
+    text-align: center;
+    cursor: pointer;
+    margin-left: 20px;
+}
+.progressBox{
+    width: 256px;
+    height: 24px;
+    float: left;
+    margin-top: 6px;
+    margin-left: 11px;
+    background: rgba(0,0,0,.5);
+    position: relative;
+    border-radius: 5px;
+}
+.progressBlue{
+    width: 0;
+    height: 24px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #00ccff;
+    border-radius: 5px;
+}
+.hideEl{
+    width: 0;
+    height: 24px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    background: transparent;
+}
+.percentBox{
+    height: 24px;
+    line-height: 24px;
+    float: right;
+    margin: 6px 20px 0 0;
+}
+.btnBox .btnEndStep{
+    background: #d9544f;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

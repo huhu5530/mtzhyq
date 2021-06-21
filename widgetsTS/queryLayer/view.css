@@ -1,0 +1,45 @@
+ 
+.mars-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.mars-table tr td {
+    padding: 5px 10px;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.mars-table tr td:first-child {
+    border-left: none;
+}
+
+.mars-table .nametd {
+    padding: 5px 20px 5px 10px;
+}
+
+
+.tb-border {
+    border: #cde1de 1px solid;
+}
+
+.tb-border tr td {
+    border: #cde1de 1px solid;
+}
+
+
+.radio-inline + .radio-inline {
+    margin-left: 5px;
+}
+
+.radio label { 
+    padding-left: 1px;
+}
+
+.center{
+    text-align: center;
+    margin: 10px 0 20px 0;
+}

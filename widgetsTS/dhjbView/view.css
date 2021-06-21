@@ -1,0 +1,32 @@
+.divpoint1 {
+    position: relative;
+    width: 200px;
+    height: 134px;
+    background: rgba(42, 42, 42, 0.8);
+    border-radius: 4px;
+    background: url("./img/marker/div1.png");
+    background-size: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-animation: mymove 5s infinite;
+    animation: mymove 5s infinite;
+    animation-duration: 5s;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-fill-mode: none;
+    animation-play-state: running;
+    animation-name: mymove;
+}
+
+.divpoint1 .title {
+    position: relative;
+    top: 20px;
+    left: 70px;
+    font-size: 15px;
+    text-align: left;
+    color: rgba(255, 255, 255, 1);
+    text-shadow: 0px 0px 9px rgba(0, 0, 0, 0.75);
+}

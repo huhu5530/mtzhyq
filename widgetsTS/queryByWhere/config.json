@@ -1,0 +1,145 @@
+{
+    "where": {
+        "text": [
+            { "field": "like", "name": "模糊匹配" },
+            { "field": "=", "name": "等于" }
+        ],
+        "number": [
+            { "field": "=", "name": "=" },
+            { "field": "<>", "name": "<>" },
+            { "field": ">", "name": ">" },
+            { "field": ">=", "name": ">=" },
+            { "field": "<", "name": "<" },
+            { "field": "<=", "name": "<=" }
+        ]
+    },
+    "layers": [
+        { "name": "POI信息点", "id": 1 },
+        {
+            "name": "政府机关",
+            "pid": 1,
+            "url": "http://data.marsgis.cn/arcgis/rest/services/mars/hefei/MapServer/18",
+             "symbol": {
+                "styleOptions": {
+                    "image": "img/marker/mark3.png",
+                    "scale": 1,
+                    "scaleByDistance": true,
+                    "scaleByDistance_far": 20000,
+                    "scaleByDistance_farValue": 0.5,
+                    "scaleByDistance_near": 1000,
+                    "scaleByDistance_nearValue": 1,
+                    "label": {
+                        "text": "{NAME}",
+                        "font_size": 17,
+                        "color": "#ffffff",
+                        "border": true,
+                        "border_color": "#000000",
+                        "pixelOffset": [ 0, -50 ],
+                        "distanceDisplayCondition": true,
+                        "distanceDisplayCondition_far": 2000,
+                        "distanceDisplayCondition_near": 0
+                    }
+                }
+            },
+            "columns": [
+                { "field": "NAME", "name": "名称" },
+                { "field": "address", "name": "地址" }
+            ]
+        },
+        {
+            "name": "停车场",
+            "pid": 1,
+            "url": "http://data.marsgis.cn/arcgis/rest/services/mars/hefei/MapServer/14",
+             "symbol": {
+                "styleOptions": {
+                    "image": "img/marker/mark4.png",
+                    "scale": 1,
+                    "scaleByDistance": true,
+                    "scaleByDistance_far": 20000,
+                    "scaleByDistance_farValue": 0.5,
+                    "scaleByDistance_near": 1000,
+                    "scaleByDistance_nearValue": 1,
+                    "label": {
+                        "text": "{NAME}",
+                        "font_size": 17,
+                        "color": "#ffffff",
+                        "border": true,
+                        "border_color": "#000000",
+                        "pixelOffset": [ 0, -50 ],
+                        "distanceDisplayCondition": true,
+                        "distanceDisplayCondition_far": 2000,
+                        "distanceDisplayCondition_near": 0
+                    }
+                }
+            },
+            "columns": [
+                { "field": "NAME", "name": "名称" },
+                { "field": "address", "name": "地址" }
+            ]
+        },
+        { "name": "道路", "id": 2 },
+        {
+            "name": "县道",
+            "pid": 2,
+            "url": "http://data.marsgis.cn/arcgis/rest/services/mars/hefei/MapServer/29",     
+            "symbol": {
+                "styleOptions": {
+                    "color": "#00ff00",
+                    "width": 4
+                }
+            },
+            "columns": [
+                { "field": "NAME", "name": "名称" },
+                { "field": "address", "name": "地址" }
+            ]
+        },
+        {
+            "name": "乡镇村道",
+            "pid": 2,
+            "url": "http://data.marsgis.cn/arcgis/rest/services/mars/hefei/MapServer/28",
+             "symbol": {
+                "styleOptions": {
+                    "color": "#3388ff",
+                    "width": 3
+                }
+            },
+            "columns": [
+                { "field": "NAME", "name": "名称" },
+                { "field": "address", "name": "地址" }
+            ]
+        },
+        { "name": "区域", "id": 3 },
+        {
+            "name": "建筑物",
+            "pid": 3,
+            "url": "http://data.marsgis.cn/arcgis/rest/services/mars/hefei/MapServer/37",
+             "symbol": {
+                "styleOptions": {
+                    "color": "#0d3685",
+                    "outlineColor": "#0d3685",
+                    "opacity": 0.6
+                }
+            },
+            "buildings": {
+                "cloumn": "floor"
+            },
+            "columns": [
+                { "field": "NAME", "name": "名称" },
+                { "field": "floor", "name": "楼层"}
+            ],
+            "columnsShow": {
+                "where": [ "NAME", "floor" ],
+                "table": [ "NAME", "floor" ]
+            }
+        }
+
+
+
+
+
+
+
+
+
+    ]
+}

@@ -1,0 +1,869 @@
+{
+    "点及文字": [       
+        {
+            "name": "文字",
+            "image": "$plot$/img/label.jpg",
+            "type": "label",
+            "edittype": "label",
+            "iconClass": "fa fa-text-width"
+        },
+        {
+            "name": "点(带注记)",
+            "image": "$plot$/img/pointlbl.jpg",
+            "type": "point",
+            "edittype": "point",
+            "style":{
+                "color":"#ff0000",
+                "label": {
+                    "text": "注记",
+                    "font_size": 20,
+                    "color": "#ffffff",
+                    "border": true,
+                    "border_color": "#000000",
+                    "pixelOffsetX":0,
+                    "pixelOffsetY":-13 
+                }
+            }
+        },
+        {
+            "name": "图标点(带注记)",
+            "image": "$plot$/img/marklbl.jpg",
+            "type": "billboard",
+            "edittype": "billboard",
+            "style":{
+                "image": "img/marker/mark4.png",
+                "label": {
+                    "text": "注记",
+                    "font_size": 25,
+                    "color": "#ffffff",
+                    "border": true,
+                    "pixelOffsetX":0,
+                    "pixelOffsetY":-50
+                }
+            }
+        },
+        {
+            "name": "DIV点1",
+            "image": "img/marker/tf.gif",
+            "type": "div-point", 
+            "style":{
+                "html": "<img src='img/marker/tf.gif' style='width:100px;height:100px;pointer-events:none;' ></img>",
+                "horizontalOrigin":"CENTER",
+                "verticalOrigin":"CENTER"
+            }
+        },
+        {
+            "name": "DIV点2", 
+            "type": "div-point", 
+            "image": "$plot$/img/divpoint.jpg",
+            "style":{
+                "html": "<div class='mars3d-animation-point' style='color:#1ffee6;'><p></p></div>"
+            }
+        },  
+        {
+            "name": "图标点1",
+            "type": "billboard",
+            "edittype": "billboard",
+            "style": {
+                "image": "img/marker/mark1.png"
+            }
+        },
+        {
+            "name": "图标点2",
+            "type": "billboard",
+            "edittype": "billboard",
+            "style": {
+                "image": "img/marker/mark2.png"
+            }
+        },
+        {
+            "name": "图标点3",
+            "type": "billboard",
+            "edittype": "billboard",
+            "style": {
+                "image": "img/marker/mark3.png"
+            }
+        },
+        {
+            "name": "点",
+            "image": "$plot$/img/point.jpg",
+            "type": "point",
+            "edittype": "point"
+        }
+    ],
+    "字体点": [
+        { "name": "fa字体flag", "type": "font-point", "style": { "color":"#fafa00","iconClass": "fa fa-flag" } },
+        { "name": "fa字体flag-checkered", "type": "font-point", "style": { "color":"#fafa00","iconClass": "fa fa-flag-checkered" } },
+        { "name": "fa字体flag-o", "type": "font-point", "style": { "color":"#fafa00","iconClass": "fa fa-flag-o" } },
+        { "name": "fa字体crosshairs", "type": "font-point", "style": { "color":"#fafa00","iconClass": "fa fa-crosshairs" } },
+        { "name": "fa字体map-marker", "type": "font-point", "style": { "color":"#fafa00","iconClass": "fa fa-map-marker" } },
+        { "name": "fa字体map-pin", "type": "font-point", "style": { "color":"#fafa00","iconClass": "fa fa-map-pin" } },
+        { "name": "fa字体map-signs", "type": "font-point", "style": { "color":"#fafa00","iconClass": "fa fa-map-signs" } },
+        { "name": "fa字体podcast", "type": "font-point", "style": { "color":"#fafa00","iconClass": "fa fa-podcast" } },
+        { "name": "fa字体tree", "type": "font-point", "style": { "color":"#fafa00","iconClass": "fa fa-tree" } },
+        { "name": "fa字体bicycle", "type": "font-point", "style": { "color":"#fafa00","iconClass": "fa fa-bicycle" } },
+        { "name": "fa字体motorcycle", "type": "font-point", "style": { "color":"#fafa00","iconClass": "fa fa-motorcycle" } },
+        { "name": "fa字体truck", "type": "font-point", "style": { "color":"#fafa00","iconClass": "fa fa-truck" } },
+        { "name": "fa字体ambulance", "type": "font-point", "style": { "color":"#fafa00","iconClass": "fa fa-ambulance" } },
+        { "name": "fa字体automobile", "type": "font-point", "style": { "color":"#fafa00","iconClass": "fa fa-automobile" } },
+        { "name": "fa字体bus", "type": "font-point", "style": { "color":"#fafa00","iconClass": "fa fa-bus" } },
+        { "name": "fa字体cab", "type": "font-point", "style": { "color":"#fafa00","iconClass": "fa fa-cab" } },
+        { "name": "fa字体car", "type": "font-point", "style": { "color":"#fafa00","iconClass": "fa fa-car" } },
+        { "name": "fa字体taxi", "type": "font-point", "style": { "color":"#fafa00","iconClass": "fa fa-taxi" } },
+        { "name": "fa字体train", "type": "font-point", "style": { "color":"#fafa00","iconClass": "fa fa-train" } },
+        { "name": "fa字体subway", "type": "font-point", "style": { "color":"#fafa00","iconClass": "fa fa-subway" } },
+        { "name": "fa字体plane", "type": "font-point", "style": { "color":"#fafa00","iconClass": "fa fa-plane" } },
+        { "name": "fa字体rocket", "type": "font-point", "style": { "color":"#fafa00","iconClass": "fa fa-rocket" } },
+        { "name": "fa字体fighter-jet", "type": "font-point", "style": { "color":"#fafa00","iconClass": "fa fa-fighter-jet" } },
+        { "name": "fa字体paper-plane", "type": "font-point", "style": { "color":"#fafa00","iconClass": "fa fa-paper-plane" } },
+        { "name": "fa字体paper-plane-o", "type": "font-point", "style": { "color":"#fafa00","iconClass": "fa fa-paper-plane-o" } },
+        { "name": "fa字体space-shuttle", "type": "font-point", "style": { "color":"#fafa00","iconClass": "fa fa-space-shuttle" } },
+        { "name": "fa字体ship", "type": "font-point", "style": { "color":"#fafa00","iconClass": "fa fa-ship" } },
+        { "name": "fa字体fire-extinguisher", "type": "font-point", "style": { "color":"#fafa00","iconClass": "fa fa-fire-extinguisher" } },
+        { "name": "fa字体anchor", "type": "font-point", "style": { "color":"#fafa00","iconClass": "fa fa-anchor" } },
+        { "name": "fa字体asterisk", "type": "font-point", "style": { "color":"#fafa00","iconClass": "fa fa-asterisk" } },
+        { "name": "fa字体balance-scale", "type": "font-point", "style": { "color":"#fafa00","iconClass": "fa fa-balance-scale" } },
+        { "name": "fa字体fax", "type": "font-point", "style": { "color":"#fafa00","iconClass": "fa fa-fax" } },
+        { "name": "fa字体feed", "type": "font-point", "style": { "color":"#fafa00","iconClass": "fa fa-feed" } },
+        { "name": "fa字体female", "type": "font-point", "style": { "color":"#fafa00","iconClass": "fa fa-female" } },
+        { "name": "fa字体film", "type": "font-point", "style": { "color":"#fafa00","iconClass": "fa fa-film" } },
+        { "name": "fa字体filter", "type": "font-point", "style": { "color":"#fafa00","iconClass": "fa fa-filter" } },
+        { "name": "fa字体flash", "type": "font-point", "style": { "color":"#fafa00","iconClass": "fa fa-flash" } },
+        { "name": "fa字体flask", "type": "font-point", "style": { "color":"#fafa00","iconClass": "fa fa-flask" } },
+        { "name": "fa字体frown-o", "type": "font-point", "style": { "color":"#fafa00","iconClass": "fa fa-frown-o" } },
+        { "name": "fa字体futbol-o", "type": "font-point", "style": { "color":"#fafa00","iconClass": "fa fa-futbol-o" } },
+        { "name": "fa字体gamepad", "type": "font-point", "style": { "color":"#fafa00","iconClass": "fa fa-gamepad" } },
+        { "name": "fa字体gavel", "type": "font-point", "style": { "color":"#fafa00","iconClass": "fa fa-gavel" } },
+        { "name": "fa字体gear", "type": "font-point", "style": { "color":"#fafa00","iconClass": "fa fa-gear" } },
+        { "name": "fa字体gears", "type": "font-point", "style": { "color":"#fafa00","iconClass": "fa fa-gears" } },
+        { "name": "fa字体gift", "type": "font-point", "style": { "color":"#fafa00","iconClass": "fa fa-gift" } },
+        { "name": "fa字体glass", "type": "font-point", "style": { "color":"#fafa00","iconClass": "fa fa-glass" } },
+        { "name": "fa字体globe", "type": "font-point", "style": { "color":"#fafa00","iconClass": "fa fa-globe" } },
+        { "name": "fa字体graduation-cap", "type": "font-point", "style": { "color":"#fafa00","iconClass": "fa fa-graduation-cap" } },
+        { "name": "fa字体group", "type": "font-point", "style": { "color":"#fafa00","iconClass": "fa fa-group" } },
+        { "name": "fa字体handshake-o", "type": "font-point", "style": { "color":"#fafa00","iconClass": "fa fa-handshake-o" } },
+        { "name": "fa字体hashtag", "type": "font-point", "style": { "color":"#fafa00","iconClass": "fa fa-hashtag" } },
+        { "name": "fa字体hdd-o", "type": "font-point", "style": { "color":"#fafa00","iconClass": "fa fa-hdd-o" } },
+        { "name": "fa字体headphones", "type": "font-point", "style": { "color":"#fafa00","iconClass": "fa fa-headphones" } },
+        { "name": "fa字体history", "type": "font-point", "style": { "color":"#fafa00","iconClass": "fa fa-history" } },
+        { "name": "fa字体hotel", "type": "font-point", "style": { "color":"#fafa00","iconClass": "fa fa-hotel" } },
+        { "name": "fa字体hourglass", "type": "font-point", "style": { "color":"#fafa00","iconClass": "fa fa-hourglass" } },
+        { "name": "fa字体hourglass-end", "type": "font-point", "style": { "color":"#fafa00","iconClass": "fa fa-hourglass-end" } },
+        { "name": "fa字体hourglass-half", "type": "font-point", "style": { "color":"#fafa00","iconClass": "fa fa-hourglass-half" } },
+        { "name": "fa字体hourglass-o", "type": "font-point", "style": { "color":"#fafa00","iconClass": "fa fa-hourglass-o" } },
+        { "name": "fa字体hourglass-start", "type": "font-point", "style": { "color":"#fafa00","iconClass": "fa fa-hourglass-start" } },
+        { "name": "fa字体lock", "type": "font-point", "style": { "color":"#fafa00","iconClass": "fa fa-lock" } },
+        { "name": "fa字体magic", "type": "font-point", "style": { "color":"#fafa00","iconClass": "fa fa-magic" } },
+        { "name": "fa字体magnet", "type": "font-point", "style": { "color":"#fafa00","iconClass": "fa fa-magnet" } },
+        { "name": "fa字体male", "type": "font-point", "style": { "color":"#fafa00","iconClass": "fa fa-male" } },
+        { "name": "fa字体map", "type": "font-point", "style": { "color":"#fafa00","iconClass": "fa fa-map" } },
+        { "name": "fa字体map-o", "type": "font-point", "style": { "color":"#fafa00","iconClass": "fa fa-map-o" } },
+        { "name": "fa字体meh-o", "type": "font-point", "style": { "color":"#fafa00","iconClass": "fa fa-meh-o" } },
+        { "name": "fa字体phone", "type": "font-point", "style": { "color":"#fafa00","iconClass": "fa fa-phone" } },
+        { "name": "fa字体phone-square", "type": "font-point", "style": { "color":"#fafa00","iconClass": "fa fa-phone-square" } },
+        { "name": "fa字体photo", "type": "font-point", "style": { "color":"#fafa00","iconClass": "fa fa-photo" } },
+        { "name": "fa字体picture-o", "type": "font-point", "style": { "color":"#fafa00","iconClass": "fa fa-picture-o" } },
+        { "name": "fa字体plug", "type": "font-point", "style": { "color":"#fafa00","iconClass": "fa fa-plug" } },
+        { "name": "fa字体plus", "type": "font-point", "style": { "color":"#fafa00","iconClass": "fa fa-plus" } },
+        { "name": "fa字体plus-circle", "type": "font-point", "style": { "color":"#fafa00","iconClass": "fa fa-plus-circle" } },
+        { "name": "fa字体plus-square-o", "type": "font-point", "style": { "color":"#fafa00","iconClass": "fa fa-plus-square-o" } },
+        { "name": "fa字体power-off", "type": "font-point", "style": { "color":"#fafa00","iconClass": "fa fa-power-off" } },
+        { "name": "fa字体print", "type": "font-point", "style": { "color":"#fafa00","iconClass": "fa fa-print" } },
+        { "name": "fa字体qrcode", "type": "font-point", "style": { "color":"#fafa00","iconClass": "fa fa-qrcode" } },
+        { "name": "fa字体s15", "type": "font-point", "style": { "color":"#fafa00","iconClass": "fa fa-s15" } },
+        { "name": "fa字体search", "type": "font-point", "style": { "color":"#fafa00","iconClass": "fa fa-search" } },
+        { "name": "fa字体search-minus", "type": "font-point", "style": { "color":"#fafa00","iconClass": "fa fa-search-minus" } },
+        { "name": "fa字体search-plus", "type": "font-point", "style": { "color":"#fafa00","iconClass": "fa fa-search-plus" } },
+        { "name": "fa字体server", "type": "font-point", "style": { "color":"#fafa00","iconClass": "fa fa-server" } },
+        { "name": "fa字体share", "type": "font-point", "style": { "color":"#fafa00","iconClass": "fa fa-share" } },
+        { "name": "fa字体share-alt", "type": "font-point", "style": { "color":"#fafa00","iconClass": "fa fa-share-alt" } },
+        { "name": "fa字体share-alt-square", "type": "font-point", "style": { "color":"#fafa00","iconClass": "fa fa-share-alt-square" } },
+        { "name": "fa字体share-square", "type": "font-point", "style": { "color":"#fafa00","iconClass": "fa fa-share-square" } },
+        { "name": "fa字体share-square-o", "type": "font-point", "style": { "color":"#fafa00","iconClass": "fa fa-share-square-o" } },
+        { "name": "fa字体shield", "type": "font-point", "style": { "color":"#fafa00","iconClass": "fa fa-shield" } },
+        { "name": "fa字体shopping-bag", "type": "font-point", "style": { "color":"#fafa00","iconClass": "fa fa-shopping-bag" } },
+        { "name": "fa字体shopping-basket", "type": "font-point", "style": { "color":"#fafa00","iconClass": "fa fa-shopping-basket" } },
+        { "name": "fa字体shopping-cart", "type": "font-point", "style": { "color":"#fafa00","iconClass": "fa fa-shopping-cart" } },
+        { "name": "fa字体shower", "type": "font-point", "style": { "color":"#fafa00","iconClass": "fa fa-shower" } },
+        { "name": "fa字体sign-in", "type": "font-point", "style": { "color":"#fafa00","iconClass": "fa fa-sign-in" } },
+        { "name": "fa字体sign-out", "type": "font-point", "style": { "color":"#fafa00","iconClass": "fa fa-sign-out" } },
+        { "name": "fa字体signal", "type": "font-point", "style": { "color":"#fafa00","iconClass": "fa fa-signal" } },
+        { "name": "fa字体snowflake-o", "type": "font-point", "style": { "color":"#fafa00","iconClass": "fa fa-snowflake-o" } },
+        { "name": "fa字体soccer-ball-o", "type": "font-point", "style": { "color":"#fafa00","iconClass": "fa fa-soccer-ball-o" } },
+        { "name": "fa字体street-view", "type": "font-point", "style": { "color":"#fafa00","iconClass": "fa fa-street-view" } }
+    ],
+    "小模型": [
+        {
+            "name": "小汽车",
+            "image": "$serverURL_gltf$/mars/img/qiche.jpg",
+            "type": "model",
+            "style": {
+                "scale": 0.1,
+                "modelUrl": "$serverURL_gltf$/mars/qiche.gltf"
+            }
+        },
+        {
+            "name": "警车",
+            "image": "$serverURL_gltf$/mars/img/jingche.jpg",
+            "type": "model",
+            "style": {
+                "scale": 3,
+                "modelUrl": "$serverURL_gltf$/mars/jingche/jingche.gltf"
+            }
+        },
+        {
+            "name": "消防车",
+            "image": "$serverURL_gltf$/mars/img/xiaofangche.jpg",
+            "type": "model",
+            "style": {
+                "modelUrl": "$serverURL_gltf$/mars/firedrill/xiaofangche.gltf"
+            }
+        },
+        {
+            "name": "起重车",
+            "image": "$serverURL_gltf$/mars/img/qzcar.jpg",
+            "type": "model",
+            "style": {
+                "modelUrl": "$serverURL_gltf$/mars/qzcar/GKZY_anim.gltf"
+            }
+        },
+        {
+            "name": "土方车",
+            "image": "$serverURL_gltf$/mars/img/tufangche.jpg",
+            "type": "model",
+            "style": {
+                "modelUrl": "$serverURL_gltf$/mars/car/tufangche.glb"
+            }
+        },
+        {
+            "name": "挖掘机",
+            "image": "$serverURL_gltf$/mars/img/wajueji.jpg",
+            "type": "model",
+            "style": {
+                "scale": 3,
+                "modelUrl": "$serverURL_gltf$/mars/car/wajueji.glb"
+            }
+        },
+
+        {
+            "name": "MQ-9无人机",
+            "image": "$serverURL_gltf$/mars/img/MQ-9-Predator.jpg",
+            "type": "model",
+            "style": {
+                "scale": 1,
+                "modelUrl": "$serverURL_gltf$/mars/MQ-9-Predator.glb"
+            }
+        },
+        {
+            "name": "战机",
+            "image": "$serverURL_gltf$/mars/img/zhanji.jpg",
+            "type": "model",
+            "style": {
+                "scale": 0.1,
+                "modelUrl": "$serverURL_gltf$/mars/zhanji.glb"
+            }
+        },
+        {
+            "name": "飞机",
+            "image": "$serverURL_gltf$/mars/img/feiji.jpg",
+            "type": "model",
+            "style": {
+                "modelUrl": "$serverURL_gltf$/mars/feiji.glb"
+            }
+        },
+
+        {
+            "name": "渔船",
+            "image": "$serverURL_gltf$/mars/img/ship-09.jpg",
+            "type": "model",
+            "style": {
+                "modelUrl": "$serverURL_gltf$/mars/ship/ship09.glb",
+                "scale":1
+            }
+        },
+        {
+            "name": "煤炭船",
+            "image": "$serverURL_gltf$/mars/img/ship-05.jpg",
+            "type": "model",
+            "style": {
+                "modelUrl": "$serverURL_gltf$/mars/ship/ship05.glb",
+                "scale":1
+            }
+        }, 
+        {
+            "name": "拖轮",
+            "image": "$serverURL_gltf$/mars/img/ship-04.jpg",
+            "type": "model",
+            "style": {
+                "modelUrl": "$serverURL_gltf$/mars/ship/ship04.glb",
+                "scale":1
+            }
+        },
+
+        {
+            "name": "散货船",
+            "image": "$serverURL_gltf$/mars/img/ship-01.jpg",
+            "type": "model",
+            "style": {
+                "modelUrl": "$serverURL_gltf$/mars/ship/ship01.glb",
+                "scale":1
+            }
+        },
+        {
+            "name": "集装箱船",
+            "image": "$serverURL_gltf$/mars/img/ship-03.jpg",
+            "type": "model",
+            "style": {
+                "modelUrl": "$serverURL_gltf$/mars/ship/ship03.glb",
+                "scale":1
+            }
+        },
+        {
+            "name": "化工品船",
+            "image": "$serverURL_gltf$/mars/img/ship-08.jpg",
+            "type": "model",
+            "style": {
+                "modelUrl": "$serverURL_gltf$/mars/ship/ship08.glb",
+                "scale":1
+            }
+        },
+ 
+     
+        {
+            "name": "行人",
+            "image": "$serverURL_gltf$/mars/img/man.jpg",
+            "type": "model",
+            "style": {
+                "modelUrl": "$serverURL_gltf$/mars/man/walk.gltf"
+            }
+        },
+        {
+            "name": "巡逻人员",
+            "image": "$serverURL_gltf$/mars/img/gongren.jpg",
+            "type": "model",
+            "style": {
+                "modelUrl": "$serverURL_gltf$/mars/man/gongren.glb"
+            }
+        },
+        {
+            "name": "消防员",
+            "image": "$serverURL_gltf$/mars/img/xiaofangyuan.jpg",
+            "type": "model",
+            "style": {
+                "modelUrl": "$serverURL_gltf$/mars/firedrill/xiaofangyuan.glb"
+            }
+        },
+
+        {
+            "name": "风力发电机",
+            "image": "$serverURL_gltf$/mars/img/fengche.jpg",
+            "type": "model",
+            "style": {
+                "modelUrl": "$serverURL_gltf$/mars/fengche.gltf"
+            }
+        },
+        {
+            "name": "电线塔",
+            "image": "$serverURL_gltf$/mars/img/tower.jpg",
+            "type": "model",
+            "style": {
+                "modelUrl": "$serverURL_gltf$/mars/tower/tower.glb"
+            }
+        },
+        {
+            "name": "电线架子",
+            "image": "$serverURL_gltf$/mars/img/railway-jiazi.jpg",
+            "type": "model",
+            "style": {
+                "modelUrl": "$serverURL_gltf$/mars/railway/jiazi.glb",
+                "scale":0.001
+            }
+        }
+
+
+
+    ],
+    "二维平面类": [
+        {
+            "name": "线",
+            "image": "$plot$/img/polyline.jpg",
+            "type": "polyline",
+            "edittype": "polyline",
+            "style": {
+                "clampToGround": false
+            }
+        },
+        {
+            "name": "闭合线",
+            "image": "$plot$/img/polyline.jpg",
+            "type": "polyline",
+            "edittype": "polyline",
+            "style": {
+                "closure":true,
+                "clampToGround": false
+            }
+        },
+        {
+            "name": "贴地线",
+            "image": "$plot$/img/polyline_clampToGround.jpg",
+            "type": "polyline",
+            "edittype": "polyline",
+            "style": {
+                "clampToGround": true,
+                "color": "#ffff00"
+            }
+        },
+        {
+            "name": "流动线",
+            "image": "$plot$/img/polyline_flow.jpg",
+            "type": "polyline",
+            "edittype": "polyline",
+            "style": {
+                "clampToGround": false,
+                "lineType": "animation",
+                "animationImage": "img/textures/lineClr.png",
+                "color": "#33e8df"
+            }
+        },
+        {
+            "name": "动态线",
+            "image": "$plot$/img/polyline_flow2.jpg",
+            "type": "polyline",
+            "edittype": "polyline",
+            "style": {
+                "clampToGround": false,
+                "lineType": "animation",
+                "animationImage": "img/textures/LinkPulse.png",
+                "color": "#33e8df",
+                "width": 8
+            }
+        },
+        {
+            "name": "曲线",
+            "image": "$plot$/img/curve.jpg",
+            "type": "curve",
+            "edittype": "polyline",
+            "style": {
+                "clampToGround": false
+            }
+        },
+        {
+            "name": "贴地曲线",
+            "image": "$plot$/img/curve_clampToGround.jpg",
+            "type": "curve",
+            "edittype": "polyline",
+            "style": {
+                "clampToGround": true,
+                "color": "#ffff00"
+            }
+        },
+        {
+            "name": "走廊",
+            "image": "$plot$/img/corridor.jpg",
+            "type": "corridor",
+            "edittype": "corridor"
+        }, 
+        {
+            "name": "贴地走廊",
+            "image": "$plot$/img/corridor_clampToGround.jpg",
+            "type": "corridor",
+            "edittype": "corridor",
+            "style": {
+                "clampToGround": true,
+                "color": "#ffff00"
+            }
+        },  
+        {
+            "name": "面",
+            "image": "$plot$/img/polygon.jpg",
+            "type": "polygon",
+            "edittype": "polygon"
+        },
+        {
+            "name": "贴地面",
+            "image": "$plot$/img/polygon_clampToGround.jpg",
+            "type": "polygon",
+            "edittype": "polygon_clampToGround"
+        },
+        {
+            "name": "矩形",
+            "image": "$plot$/img/rectangle.jpg",
+            "type": "rectangle",
+            "edittype": "rectangle"
+        },
+        {
+            "name": "贴地矩形",
+            "image": "$plot$/img/rectangle_clampToGround.jpg",
+            "type": "rectangle",
+            "edittype": "rectangle",
+            "style": {
+                "clampToGround": true,
+                "color": "#ffff00"
+            }
+        },  
+        {
+            "name": "平面",
+            "image": "$plot$/img/plane.jpg",
+            "type": "plane",
+            "edittype": "plane"
+        },
+        {
+            "name": "等腰三角形",
+            "image": "$plot$/img/triangleDY.jpg",
+            "type": "triangleDY",
+            "edittype": "polygon",
+            "style": { 
+                "color": "#2ef7e6"
+            },
+            "hide":true
+        },
+        {
+            "name": "正三角形",
+            "image": "$plot$/img/regular3.jpg",
+            "type": "regular",
+            "edittype": "polygon",
+            "config": {
+                "border": 3
+            },
+            "style": { 
+                "color": "#2ef7e6"
+            }
+        },
+        {
+            "name": "正方形",
+            "image": "$plot$/img/regular4.jpg",
+            "type": "regular",
+            "edittype": "polygon",
+            "config": {
+                "border": 4
+            } ,
+            "style": { 
+                "color": "#2ef7e6"
+            }
+        },
+        {
+            "name": "正五边形",
+            "image": "$plot$/img/regular5.jpg",
+            "type": "regular",
+            "edittype": "polygon",
+            "config": {
+                "border": 5
+            },
+            "style": { 
+                "color": "#2ef7e6"
+            }
+        }, 
+        {
+            "name": "圆",
+            "image": "$plot$/img/circle.jpg",
+            "type": "circle",
+            "edittype": "circle"
+        },
+        {
+            "name": "贴地圆",
+            "image": "$plot$/img/circle_clampToGround.jpg",
+            "type": "circle",
+            "edittype": "circle_clampToGround"
+        },
+        {
+            "name": "动态圆",
+            "image": "$plot$/img/circle_animation.jpg",
+            "type": "circle",
+            "edittype": "circle",
+            "style": {
+                "fillType": "animationCircle",
+                "animationCount":2,
+                "outline":false
+            }
+        },
+        {
+            "name": "椭圆",
+            "image": "$plot$/img/ellipse.jpg",
+            "type": "ellipse",
+            "edittype": "ellipse"
+        },
+        {
+            "name": "贴地椭圆",
+            "image": "$plot$/img/ellipse_clampToGround.jpg",
+            "type": "ellipse",
+            "edittype": "ellipse_clampToGround"
+        },
+        {
+            "name": "扇形",
+            "image": "$plot$/img/sector.jpg",
+            "type": "sector",
+            "edittype": "polygon",
+            "style": { 
+                "color": "#2ef7e6"
+            }
+        },
+        {
+            "name": "弓形",
+            "image": "$plot$/img/lune.jpg",
+            "type": "lune",
+            "edittype": "polygon",
+            "style": { 
+                "color": "#2ef7e6"
+            }
+        },
+        {
+            "name": "贴地矩形图片",
+            "type": "rectangle",
+            "edittype": "rectangleImg",
+            "style": {
+                "image": "img/tietu/gugong.jpg"
+            }
+        },
+        {
+            "name": "圆形图片", 
+            "type": "circle",
+            "edittype": "circle",
+            "style": {
+                "fillType":"image",
+                "image": "img/tietu/leida.jpg",
+                "outline": false,
+                "opacity":0.8
+            }
+        },
+        {
+            "name": "多边形图片",
+            "type": "polygon",
+            "edittype": "polygon",
+            "style": {
+                "fillType":"image",
+                "image": "img/textures/excavate_bottom_min.jpg",
+                "opacity":1
+            }
+        }
+    ],
+    "三维立体类": [ 
+        {
+            "name": "墙体",
+            "image": "$plot$/img/wall.jpg",
+            "type": "wall",
+            "edittype": "wall"
+        },
+
+        {
+            "name": "闭合墙体",
+            "image": "$plot$/img/wall.jpg",
+            "type": "wall",
+            "edittype": "wall",
+            "style": {
+                "closure":true
+            }
+        },
+        {
+            "name": "动态墙体",
+            "image": "$plot$/img/wall_fence.jpg",
+            "type": "wall",
+            "edittype": "wall",
+            "style": {
+                "fillType": "animationLine",
+                "animationImage": "img/textures/fence.png",
+                "animationAxisY": true,
+                "color": "#36ff5b",
+                "outline":false
+            }
+        },
+        {
+            "name": "动态箭头墙体",
+            "image": "$plot$/img/wall_arrow.jpg",
+            "type": "wall",
+            "edittype": "wall",
+            "style": {
+                "fillType": "animationLine",
+                "animationImage": "img/textures/arrow.png",
+                "animationAxisY": false,
+                "animationRepeatX":10,
+                "color": "#36ff5b",
+                "outline":false
+            }
+        },
+        
+        {
+            "name": "竖立图片(墙)",
+            "type": "wall",
+            "edittype": "wall",
+            "image": "$plot$/img/wall_tanhao.jpg",
+            "config":{ "maxPointNum": 2 },
+            "style": {
+                "fillType": "animationLine",
+                "animationImage": "img/textures/fence.png",
+                "animationAxisY": true,
+                "color": "#ff0000",
+                "bgUrl": "img/textures/tanhao.png",
+                "bgColor": "#FFFF00",
+                "outline":false
+            }
+        },
+
+        {
+            "name": "拉伸走廊",
+            "image": "$plot$/img/extrudedCorridor.jpg",
+            "type": "corridor",
+            "edittype": "extrudedCorridor",
+            "style": {
+                "extrudedHeight": 100
+            }
+        },  
+        {
+            "name": "管道",
+            "image": "$plot$/img/polylineVolume.jpg",
+            "type": "polylineVolume",
+            "edittype": "polylineVolume" ,
+            "hide":true
+        },          
+        {
+            "name": "多边立体",
+            "image": "$plot$/img/extrudedPolygon.jpg",
+            "type": "polygon",
+            "edittype": "extrudedPolygon",
+            "style": {
+                "extrudedHeight": 100
+            }
+        },
+        {
+            "name": "立方体",
+            "image": "$plot$/img/extrudedRectangle.jpg",
+            "type": "rectangle",
+            "edittype": "extrudedRectangle"
+        },
+        
+        {
+            "name": "立体正三角形",
+            "image": "$plot$/img/regular3d.jpg",
+            "type": "regular",
+            "edittype": "extrudedPolygon",
+            "config": {
+                "border": 3
+            },
+            "style": {
+                "extrudedHeight": 100
+            }
+        }, {
+            "name": "立体正方形",
+            "image": "$plot$/img/regular4d.jpg",
+            "type": "regular",
+            "edittype": "extrudedPolygon",
+            "config": {
+                "border": 4
+            },
+            "style": {
+                "extrudedHeight": 100
+            }
+        },
+        {
+            "name": "立体正五边形",
+            "image": "$plot$/img/regular5d.jpg",
+            "type": "regular",
+            "edittype": "extrudedPolygon",
+            "config": {
+                "border": 5
+            },
+            "style": {
+                "extrudedHeight": 100
+            }
+        },
+        
+        {
+            "name": "盒子",
+            "image": "$plot$/img/box.jpg",
+            "type": "box",
+            "edittype": "box"
+        },
+
+        {
+            "name": "圆柱体",
+            "image": "$plot$/img/extrudedCircle.jpg",
+            "type": "circle",
+            "edittype": "extrudedCircle"
+        },
+        {
+            "name": "圆锥体",
+            "image": "$plot$/img/cylinder.jpg",
+            "type": "cylinder",
+            "edittype": "cylinder"
+        },
+        
+        {
+            "name": "椭圆柱体",
+            "image": "$plot$/img/extrudedEellipse.jpg",
+            "type": "ellipse",
+            "edittype": "extrudedEllipse"
+        },
+        {
+            "name": "球体",
+            "image": "$plot$/img/ellipsoid.jpg",
+            "type": "ellipsoid",
+            "edittype": "ellipsoid"
+        },
+        {
+            "name": "半球体",
+            "image": "$plot$/img/ellipsoid.jpg",
+            "type": "ellipsoid",
+            "edittype": "ellipsoid",
+            "style": {
+                "maximumCone": 90
+            }
+        }
+
+        
+    ],
+    "军事标绘":[
+        {
+            "name": "粗直箭头",
+            "image": "$plot$/img/straightArrow.jpg",
+            "type": "straightArrow",
+            "edittype": "polygon_clampToGround"
+        },
+        {
+            "name": "粗单尖直箭头",
+            "image": "$plot$/img/fineArrow.jpg",
+            "type": "fineArrow",
+            "edittype": "polygon_clampToGround"
+        },
+        {
+            "name": "燕尾直箭头",
+            "image": "$plot$/img/fineArrowYW.jpg",
+            "type": "fineArrowYW",
+            "edittype": "polygon_clampToGround"
+        },
+        {
+            "name": "攻击箭头",
+            "image": "$plot$/img/attackArrow.jpg",
+            "type": "attackArrow",
+            "edittype": "polygon_clampToGround"
+        },
+        {
+            "name": "平尾攻击箭头",
+            "image": "$plot$/img/attackArrowPW.jpg",
+            "type": "attackArrowPW",
+            "edittype": "polygon_clampToGround"
+        },
+        {
+            "name": "燕尾攻击箭头",
+            "image": "$plot$/img/attackArrowYW.jpg",
+            "type": "attackArrowYW",
+            "edittype": "polygon_clampToGround"
+        },
+        {
+            "name": "钳击箭头",
+            "image": "$plot$/img/doubleArrow.jpg",
+            "type": "doubleArrow",
+            "edittype": "polygon_clampToGround"
+        },
+        {
+            "name": "闭合曲面",
+            "image": "$plot$/img/closeVurve.jpg",
+            "type": "closeVurve",
+            "edittype": "polygon_clampToGround"
+        },
+        {
+            "name": "集结地",
+            "image": "$plot$/img/gatheringPlace.jpg",
+            "type": "gatheringPlace",
+            "edittype": "polygon_clampToGround"
+        }
+    ]
+}

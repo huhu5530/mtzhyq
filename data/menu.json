@@ -1,0 +1,270 @@
+﻿{
+    "defpage": "../map.html",
+    "menu": [
+        {
+            "name": "首页",
+            "icon": "fa fa-home",
+            "callback": "goHome()"
+        },
+        {
+            "name": "信息展示",
+            "icon": "fa fa-eye",
+            "children": [
+                {
+                    "name": "企业点",
+                    "icon": "fa fa-university",
+                    "children": [
+                        {
+                            "name": "企业分布",
+                            "uri": "widgetsTS/qyPoint/widget.js"
+                        }, 
+                        {
+                            "name": "ArcGIS服务单图层查询",
+                            "uri": "widgetsTS/queryByWhere/widget.js"
+                        },
+                        {
+                            "name": "ArcGIS服务多图层查询",
+                            "uri": "widgetsTS/queryLayer/widget.js"
+                        },
+                        
+                        {
+                            "name": "POI信息查询",
+                            "uri": "widgetsTS/queryGaodePOI/widget.js"
+                        }
+                    ]
+                },
+                {
+                    "name": "动态数据",
+                    "icon": "fa fa-ship",
+                    "children": [
+                        {
+                            "name": "飞行编队",
+                            "uri": "widgets/showLayer/widget.js?type=306011",
+                            "layerId": 306011
+                        },
+                        {
+                            "name": "船舶编队",
+                            "uri": "widgets/showLayer/widget.js?type=306012",
+                            "layerId": 306012
+                        },
+                        {
+                            "name": "台风路径",
+                            "uri": "widgetsTS/typhoon/widget.js"
+                        }  ,
+                        {
+                            "name": "动画脚本",
+                            "uri": "widgetsTS/dhjbView/widget.js"
+                        }                       
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "三维模型",
+            "icon": "fa fa-building",
+            "children": [
+                {
+                    "name": "城市建筑",
+                    "icon": "fa fa-folder-o",
+                    "children": [
+                        {
+                            "name": "合肥市区",
+                            "uri": "widgets/showLayer/widget.js?type=204011",
+                            "layerId": 204011
+                        },
+                        {
+                            "name": "上海市区",
+                            "uri": "widgets/showLayer/widget.js?type=204012",
+                            "layerId": 204012
+                        }
+                    ]
+                },
+                {
+                    "name": "人工模型",
+                    "icon": "fa fa-folder-o",
+                    "children": [
+                        {
+                            "name": "水利闸门",
+                            "uri": "widgets/showLayer/widget.js?type=202011",
+                            "autoDisable": false,
+                            "layerId": 202011
+                        },
+                        {
+                            "name": "石化工厂",
+                            "uri": "widgets/showLayer/widget.js?type=202012",
+                            "layerId": 202012 
+                        },
+                        {
+                            "name": "大学办公楼(BIM)",
+                            "uri": "widgets/showLayer/widget.js?type=20601121",
+                            "layerId": 20601121
+                        },
+                        {
+                            "name": "桥梁(BIM)",
+                            "uri": "widgets/showLayer/widget.js?type=206012",
+                            "layerId": 206012
+                        },
+                        {
+                            "name": "模型库",
+                            "uri": "widgets/plot-model/widget.js"
+                        }
+                    ]
+                },
+
+                {
+                    "name": "倾斜摄影",
+                    "icon": "fa fa-folder-o",
+                    "children": [
+                        {
+                            "name": "厂房",
+                            "uri": "widgets/showLayer/widget.js?type=203011",
+                            "layerId": 203011
+                        },
+                        {
+                            "name": "文庙",
+                            "uri": "widgets/showLayer/widget.js?type=203012",
+                            "layerId": 203012
+                        },
+                        {
+                           "name": "文庙单体示例",
+                           "uri": "widgetsTS/dantihua/widget.js",
+                           "autoDisable": false
+                       },
+                        {
+                            "name": "县城社区",
+                            "uri": "widgets/showLayer/widget.js?type=203013",
+                            "layerId": 203013
+                        }
+                    ]
+                },
+                
+                {
+                    "name": "地下管网",
+                    "icon": "fa fa-random",
+                    "children": [
+                        {
+                            "name": "矢量管网",
+                            "uri": "widgetsTS/pipeline/widget.js"
+                        },
+                        {
+                            "name": "管网模型",
+                            "uri": "widgets/showLayer/widget.js?type=202013",
+                            "layerId": 202013
+                        }
+                    ]
+                } 
+            ]
+        },
+        {
+            "name": "数据分析",
+            "icon": "fa fa-area-chart",
+            "children": [
+                {
+                    "name": "综合分析",
+                    "icon": "fa fa-folder-o",
+                    "children": [
+                        {
+                            "name": "事故模拟",
+                            "uri": "widgetsTS/sgmn/widget.js"
+                        },
+                         {
+                            "name": "淹没分析",
+                            "uri": "widgetsTS/flood/widget.js"
+                        }
+                    ]
+                },
+                {
+                    "name": "专项数据",
+                    "icon": "fa fa-folder-o",
+                    "children": [
+                        {
+                            "name": "含水层",
+                            "uri": "widgetsTS/ts_showView/widget1.js"
+                        },
+                        {
+                            "name": "经济特区",
+                            "uri": "widgetsTS/ts_showView/widget2.js"
+                        },
+                        {
+                            "name": "雨量流量监测",
+                            "uri": "widgetsTS/ts_showView/widget3.js"
+                        },
+
+                        {
+                            "name": "区域实际灌溉",
+                            "uri": "widgetsTS/ts_showView/widget4.js"
+                        },
+
+                        {
+                            "name": "大型洪水情况",
+                            "uri": "widgetsTS/ts_showView/widget5.js"
+                        },
+
+                        {
+                            "name": "主要城市水域",
+                            "uri": "widgetsTS/ts_showView/widget6.js"
+                        }
+                    ]
+                }
+
+            ]
+        },
+        {
+            "name": "综合态势",
+            "icon": "fa fa-magic",
+            "children": [
+                {
+                    "name": "热力图",
+                    "icon": "fa fa-image",
+                    "uri": "widgetsTS/showHeat/widget.js"
+                },
+                {
+                    "name": "淮海经济区",
+                    "icon": "fa fa-area-chart",
+                    "uri": "widgetsTS/showPolygon/widget.js"
+                },
+                {
+                    "name": "动态波纹点",
+                    "icon": "fa fa-bullseye",
+                    "uri": "widgetsTS/newGeometry/elliposid.js"
+                },
+                {
+                    "name": "目标扫描",
+                    "icon": "fa fa-wpexplorer",
+                    "uri": "widgetsTS/scan/widget.js"
+                },
+                {
+                    "name": "动态线",
+                    "icon": "fa fa-ticket",
+                    "uri": "widgetsTS/newGeometry/polyline.js"
+                }, 
+                {
+                    "name": "动态围墙",
+                    "icon": "fa fa-empire",
+                    "uri": "widgetsTS/newGeometry/wall.js"
+                },
+                
+                {
+                    "name": "全省经济指标",
+                    "icon": "fa fa-dashboard",
+                    "uri": "widgetsTS/showEcharts/sandian1.js"
+                },
+                
+                {
+                    "name": "迁徙图",
+                    "icon": "fa fa-send",
+                    "uri": "widgetsTS/showMapV/qianxi.js"
+                }
+
+            ]
+        }
+
+
+
+
+
+
+
+    ]
+
+}

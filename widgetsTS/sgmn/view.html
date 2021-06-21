@@ -1,0 +1,362 @@
+﻿<!DOCTYPE html>
+<html class="no-js css-menubar" lang="zh-cn">
+
+<head>
+    <title>弹窗子页面</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <!-- 移动设备 viewport -->
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui">
+    <meta name="author" content="火星科技 http://cesium.marsgis.cn ">
+    <!-- 360浏览器默认使用Webkit内核 -->
+    <meta name="renderer" content="webkit">
+    <!-- Chrome浏览器添加桌面快捷方式（安卓） -->
+    <link rel="icon" type="image/png" href="../../img/favicon/favicon.png">
+    <meta name="mobile-web-app-capable" content="yes">
+    <!-- Safari浏览器添加到主屏幕（IOS） -->
+    <link rel="icon" sizes="192x192" href="img/favicon/apple-touch-icon.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="火星科技MarsGIS">
+    <!-- Win8标题栏及ICON图标 -->
+    <link rel="apple-touch-icon-precomposed" href="../../img/favicon/apple-touch-icon.png">
+    <meta name="msapplication-TileImage" content="../../img/favicon/app-icon72x72@2x.png">
+    <meta name="msapplication-TileColor" content="#62a8ea">
+
+    <!-- 第3方lib引入 -->
+    <script type="text/javascript" src="../../lib/include-lib.js?time=20210105" libpath="../../lib/"
+        include="jquery,font-awesome,bootstrap,bootstrap-checkbox,admui-frame"></script>
+
+    <link href="../../css/widget-win.css" rel="stylesheet" />
+    <link href="view.css?time=20210105" rel="stylesheet" />
+</head>
+
+<body style="height: 100%; overflow-y: auto;">
+
+    <div class="head">
+        <div class="faultStep clearfix">
+            <span></span>
+            <span></span>
+            <span></span>
+            <div class="stepRing">
+                <i class="nowStep"></i>
+                <i></i>
+                <i></i>
+                <i></i>
+                <i></i>
+                <i></i>
+            </div>
+        </div>
+        <div class="faultText clearfix">
+            <span class="active">事故模拟</span>
+            <span>撤离模拟</span>
+            <span>救援模拟</span>
+        </div>
+    </div>
+    <div class="faultMain">
+        <div class="faultCon">
+            <div class="faultInfo">
+                <div class="faultLoc dashed">
+                    <div class="title">事故地点</div>
+                    <div class="faultChooseDot">
+                        <p class="chooseDot" id="choosePoint">图上选点</p>
+                        <ul class="dotInfo faultDot">
+                            <!-- <li class="clearfix">
+                                <p>地点坐标1</p>
+                                <span></span>
+                            </li> -->
+                        </ul>
+                    </div>
+                </div>
+                <div class="parmSet dashed">
+                    <div class="title">参数设置</div>
+                    <ul class="parmBox">
+                        <li class="clearfix">
+                            <p>风速：</p>
+                            <input id="windSpeed" type="text" value="1" />
+                            <span>m/s</span>
+                        </li>
+                        <li class="clearfix">
+                            <p>风向：</p>
+                            <input id="windDirection" type="text" value="45" />
+                            <span>向</span>
+                        </li>
+                        <li class="clearfix">
+                            <p>模拟倍速：</p>
+                            <input id="playSpeed" type="text" value="10" />
+                            <span>x</span>
+                        </li>
+                    </ul>
+                </div>
+                <input id="btnState1to2" class="nextStep startNextStep " type="button" value="开始模拟" />
+            </div>
+            <div class="faultInfo">
+                <div class="affectBox dashed">
+                    <div class="affect">影响范围：<i>0</i>公里</div>
+                    <div class="progressCon">
+                        <span>模拟进程：</span>
+                        <div class="progressInfo">
+                            <div class="progressBar">
+                                <div class="otherProgressBar gradient"></div>
+                                <div class="progressDot"></div>
+                            </div>
+                            <ul class="minBox">
+                                <li>0</li>
+                                <li class="timeMin">10</li>
+                                <li class="timeMin">20</li>
+                                <li class="timeMin">30</li>
+                                <li class="timeMin">40</li>
+                                <li class="timeMin">50</li>
+                                <li>分钟</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="effactUnit dashed">
+                    <div class="title">影响单位</div>
+                    <div class="unitFind clearfix">
+                        <span class="unitNow">POI（<i>0</i>）</span>
+                        <span>企业（<i>0</i>）</span>
+                    </div>
+                    <div class="pcTable">
+                        <div class="pcTableCon">
+                            <div class="tableBox">
+                                <div class="tableTile clearfix">
+                                    <span>序号</span>
+                                    <span>名称</span>
+                                </div>
+                                <div class="tableListBox">
+                                    <ul class="tableList poiTable clearfix">
+                                        <!-- <li>
+                                            <span>1</span>
+                                            <span>地点名称</span>
+                                        </li>
+                                        <li>
+                                            <span>1</span>
+                                            <span>地点名称</span>
+                                        </li> -->
+                                    </ul>
+                                    <p class="loadMore">加载更多</p>
+                                </div>
+                            </div>
+                            <div class="tableBox">
+                                <div class="tableTile clearfix">
+                                    <span>序号</span>
+                                    <span>名称</span>
+                                </div>
+                                <div class="tableListBox">
+                                    <ul class="tableList companyTable clearfix">
+                                        <!-- <li>
+                                            <span>1</span>
+                                            <span>地点名称</span>
+                                        </li>
+                                        <li>
+                                            <span>1</span>
+                                            <span>地点名称</span>
+                                        </li> -->
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="btnBox clearfix">
+                    <span id="btnState2to1" class="startPrevStep">上一步</span>
+                    <span id="btnState2to3" class="startNextStep">下一步</span>
+                    <span class="btnEndStep">结束模拟</span>
+                </div>
+            </div>
+            <div class="faultInfo">
+                <div class="safeLoc dashed">
+                    <div class="title">安全地点</div>
+                    <div class="faultChooseDot">
+                        <p class="chooseDot" id="setMarker_CL">图上选点</p>
+                        <ul class="dotInfo safeDot">
+                            <!-- <li class="clearfix">
+                                <i>1.</i>
+                                <p>地点坐标1</p>
+                                <span></span>
+                            </li>
+                            <li class="clearfix">
+                                <i>2.</i>
+                                <p>地点坐标2</p>
+                                <span></span>
+                            </li>
+                            <li class="clearfix">
+                                <i>3.</i>
+                                <p>地点坐标3</p>
+                                <span></span>
+                            </li>
+                            <li class="clearfix">
+                                <i>4.</i>
+                                <p>地点坐标4</p>
+                                <span></span>
+                            </li> -->
+                        </ul>
+                    </div>
+                </div>
+                <div class="btnBox clearfix">
+                    <span id="btnState3to2" class="startPrevStep">上一步</span>
+                    <span id="btnState3to4" class="startNextStep">下一步</span>
+                    <span class="skipStep">跳过</span>
+                </div>
+            </div>
+            <div class="faultInfo">
+                <p class="dataNum leaveNum" id="showRes">当前撤离<i>0</i>家企业至<i>0</i>个安全点!</p>
+                <div class="lineBox dashed">
+                    <div class="title">撤离路线</div>
+                    <div class="lineTableBox safeLineTable">
+                        <div class="lineTableHead clearfix">
+                            <span>
+                                <div class="checkbox headCheckbox">
+                                    <input type="checkbox" class="styled" id="singleCheckbox1" value="option1" aria-label="Single checkbox One" checked="checked"  />
+                                    <label></label>
+                                </div>
+                                全选
+                            </span>
+                            <span>序号</span>
+                            <span>路线</span>
+                            <span>操作</span>
+                        </div>
+                        <div class="lineTableCon">
+                            <ul class="lineTableList safeLineTableList clearfix">
+                                <!-- <li>
+                                    <span>
+                                        <input type="checkbox" checked="checked" />
+                                    </span>
+                                    <span>1</span>
+                                    <span>地点名称1-地点a</span>
+                                    <span><i class="opIcon"></i></span>
+                                </li>
+                                <li>
+                                    <span>
+                                        <input type="checkbox" checked="checked" />
+                                    </span>
+                                    <span>1</span>
+                                    <span>地点名称1-地点a</span>
+                                    <span><i class="opIcon"></i></span>
+                                </li> -->
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="speedBox leaveSpeed clearfix">
+                        <span>撤离速度：</span>
+                        <input type="text" id="leaveSpeedVal" value="120" />
+                        <span>km/h</span>
+                        <span id="startLeave" class="startAndEndText leaveText">开始撤离</span>
+                    </div>
+                    <div class="startAndEnd startAndEndLeave clearfix">
+                        <div class="progressBox leaveProgress">
+                            <p class="progressBlue leaveProgressBlue"></p>
+                            <p class="hideEl leaveHideEl"></p>
+                        </div>
+                        <span class="percentBox leavePercent">0%</span>
+                    </div>
+                </div>
+                <div class="btnBox clearfix">
+                    <span id="btnState4to3" class="startPrevStep">上一步</span>
+                    <span id="btnState4to5" class="startNextStep">下一步</span>
+                    <span class="btnEndStep">结束模拟</span>
+                </div>
+            </div>
+            <div class="faultInfo">
+                <div class="rescueLoc dashed">
+                    <div class="title">救援地点</div>
+                    <div class="faultChooseDot">
+                        <p class="chooseDot" id="setMarker_JY">图上选点</p>
+                        <ul class="dotInfo rescueDot">
+                            <!-- <li class="clearfix">
+                                <i>1.</i>
+                                <p>地点坐标1</p>
+                                <span></span>
+                            </li>
+                            <li class="clearfix">
+                                <i>2.</i>
+                                <p>地点坐标2</p>
+                                <span></span>
+                            </li>
+                            <li class="clearfix">
+                                <i>3.</i>
+                                <p>地点坐标3</p>
+                                <span></span>
+                            </li>
+                            <li class="clearfix">
+                                <i>4.</i>
+                                <p>地点坐标4</p>
+                                <span></span>
+                            </li> -->
+                        </ul>
+                    </div>
+                </div>
+                <div class="btnBox clearfix">
+                    <span id="btnState5to4" class="startPrevStep">上一步</span>
+                    <!-- <span id="btnState5to6" class="startNextStep" id="startJYMN">下一步</span> -->
+                    <span id="btnState5to6" class="startNextStep">下一步</span>
+                    <span class="btnEndStep">结束模拟</span>
+                </div>
+            </div>
+            <div class="faultInfo">
+                <p class="dataNum rescueNum">当前<i>0</i>个救援点至事故点进行救援！</p>
+                <div class="lineBox dashed">
+                    <div class="title">救援路线</div>
+                    <div class="lineTableBox">
+                        <div class="lineTableHead rescueLineTable clearfix">
+                            <span>
+                                <div class="checkbox headCheckbox">
+                                    <input type="checkbox" class="styled" id="singleCheckbox1" value="option1" aria-label="Single checkbox One" checked="checked"  />
+                                    <label></label>
+                                </div>
+                                全选
+                            </span>
+                            <span>序号</span>
+                            <span>路线</span>
+                            <span>操作</span>
+                        </div>
+                        <div class="lineTableCon">
+                            <ul class="lineTableList rescueTableList clearfix">
+                                <!-- <li>
+                                    <span>
+                                        <input type="checkbox" checked="checked" />
+                                    </span>
+                                    <span>1</span>
+                                    <span>地点名称1-地点a</span>
+                                    <span><i class="opIcon"></i></span>
+                                </li>
+                                <li>
+                                    <span>
+                                        <input type="checkbox" checked="checked" />
+                                    </span>
+                                    <span>1</span>
+                                    <span>地点名称1-地点a</span>
+                                    <span><i class="opIcon"></i></span>
+                                </li> -->
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="speedBox rescueSpeed clearfix">
+                        <span>救援速度：</span>
+                        <input type="text" id="rescueSpeedVal" value="120" />
+                        <span>km/h</span>
+                        <span id="startRescue" class="startAndEndText rescueText">开始救援</span>
+                    </div>
+                    <div class="startAndEnd startAndEndRescue clearfix">
+                        <div class="progressBox rescueProgress">
+                            <p class="progressBlue rescueProgressBlue"></p>
+                            <p class="hideEl rescueHideEl"></p>
+                        </div>
+                        <span class="percentBox rescuePercent">0%</span>
+                    </div>
+                </div>
+                <div class="btnBox clearfix">
+                    <span id="btnState6to5" class="startPrevStep">上一步</span>
+                    <span class="btnEndStep">结束模拟</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--页面js-->
+    <script src="view.js?time=20210105"></script>
+</body>
+
+</html>

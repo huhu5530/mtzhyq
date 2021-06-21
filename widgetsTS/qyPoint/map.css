@@ -1,0 +1,23 @@
+﻿/*地图上的图标and弹框*/
+.qyMarker {
+}
+
+.qyMarker li:first-child {
+    line-height: 22px;
+    color: #2E5367;
+    font-size: 16px;
+}
+
+.qyMarker li:last-child {
+    line-height: 20px;
+    color: #999999;
+    font-size: 12px;
+}
+
+.dark .qyMarker li:first-child {
+    color: #ffffff;
+}
+
+.dark .qyMarker li:last-child {
+    color: #cccccc;
+}
